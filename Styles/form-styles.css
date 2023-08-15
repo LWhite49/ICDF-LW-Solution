@@ -3,6 +3,7 @@ body{
     margin: 0px;
 }
 .left-background{
+    display:inline-block;
     padding: 0px;
     margin: 0px;
     width: 33vw;
@@ -11,4 +12,20 @@ body{
 .background-image{
     width: 33vw;
     height: 100vh;
+}
+.right-background{
+    display: inline-block;
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    width: 66vw;
+    height: 100vh;
+}
+.form-wrap{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-33%, -50%);
 }
