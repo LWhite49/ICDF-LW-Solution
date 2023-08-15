@@ -1,0 +1,14 @@
+body{
+    padding: 0px;
+    margin: 0px;
+}
+.left-background{
+    padding: 0px;
+    margin: 0px;
+    width: 33vw;
+    height: 100vh
+}
+.background-image{
+    width: 33vw;
+    height: 100vh;
+}
