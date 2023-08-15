@@ -29,3 +29,11 @@ body{
     left: 50%;
     transform: translate(-33%, -50%);
 }
+
+.name-input, .number-input {
+    width:400px;
+    height: 45px;
+}
+.expiration-entry, .cvc-entry{
+    display: inline-block;
+}
