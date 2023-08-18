@@ -1,6 +1,7 @@
 body{
     padding: 0px;
     margin: 0px;
+    font-family: "Space Grotesk";
 }
 .background-wrap{
     display: flex;
@@ -31,24 +32,28 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-33.3%, -50%);
+    row-gap: 8px;
 }
 
 .field-header{
     font-size: 8pt;
-    letter-spacing: .16cap;
-    margin-bottom: 8px;
+    letter-spacing: .12cap;
+    margin-bottom: 6px;
+    font-weight: 600;
 }
 
 .expiration-entry, .cvc-entry{
-    display: inline-block;
+    display: inline-block;  
 }
 
 .name-input, .number-input {
     width:320px;
     height: 34px;
+    font-size: 12pt;
     padding-left: 12px;
     border-radius: 6px;
-    border: solid 1px black
+    border: solid 2px rgb(170, 170, 170);
+
 }
 
 .month-input, .year-input{
@@ -56,14 +61,44 @@ body{
     height: 34px;
     margin-right: 12px;
     padding-left: 12px;
+    font-size: 12pt;
     border-radius: 6px;
-    border: solid 1px black
+    border: solid 2px rgb(170, 170, 170);
 }
 
 .cvc-input{
     width: 152px;
     height: 34px;
+    font-size: 12pt;
     padding-left: 12px;
     border-radius: 6px;
-    border: solid 1px black;
+    border: solid 2px rgb(170, 170, 170);
+}
+
+.name-input::placeholder, .number-input::placeholder,
+.month-input::placeholder, .year-input::placeholder,
+.cvc-input::placeholder{
+    color: #b7b2b2;
+    opacity: 1;
+    font-family: "Space Grotesk";
+    font-size: 11pt;
+    font-weight: 500;
+}
+.name-input:focus, .number-input:focus,
+.month-input:focus, .year-input:focus,
+.cvc-input:focus{
+    border: solid 2px #69589f;
+    outline: none;
+}
+.submit-button{
+    width:334px;
+    margin-top:22px;
+    padding: 10px 0px;
+    background-color: #241432;
+    color: white;
+    font-size: 11pt;
+    font-weight: 400;;
+    letter-spacing: .16cap;
+    border: none;
+    border-radius: 6px;
 }
