@@ -131,10 +131,17 @@ body{
     height: 245px;
     display:inline-block;
     transform: translate(-72%, 80%);
-    margin-left:16px;
 }
 .card-front-logo{
     display: inline;
     transform: translate(30%, 50%);
     z-index: 5;
+}
+.card-back-wrap{
+    z-index: 4;
+    background-image: url("/images/card-back.png");
+    width: 447px;
+    height: 245px;
+    font-display: inline-block;
+    transform: translate(-50%, 92%);
 }
