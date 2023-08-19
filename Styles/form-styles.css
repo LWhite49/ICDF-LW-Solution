@@ -149,5 +149,9 @@ body{
 }
 .cvc-output{
     font-family: "Space Grotesk";
+    font-size: 14pt;
+    letter-spacing: .1cap;
     color: #edf0f6;
+    transform: translate(80%, 506%);
+    
 }
