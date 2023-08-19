@@ -94,6 +94,11 @@ body{
     outline: none;
 }
 
+.error-highlight{
+    border: solid 2px #e87e83;
+    outline: none;
+}
+
 .error{
     margin: 3px 0px 0px 8px;
     padding: 0px;
