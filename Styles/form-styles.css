@@ -126,15 +126,15 @@ body{
 
 .card-front-wrap{
     z-index: 3;
+    background-image: url("/images/card-front.png");
+    width: 447px;
+    height: 245px;
     display:inline-block;
-    transform: translate(-60%, 80%);
+    transform: translate(-72%, 80%);
     margin-left:16px;
-}
-.card-front{
-    display: inline;
 }
 .card-front-logo{
     display: inline;
+    transform: translate(30%, 50%);
     z-index: 5;
-    transform: translate(-508%, -372%);
 }
