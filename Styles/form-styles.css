@@ -125,6 +125,7 @@ body{
 }
 
 .card-front-wrap{
+    display: relative;
     z-index: 3;
     background-image: url("/images/card-front.png");
     width: 447px;
@@ -138,10 +139,15 @@ body{
     z-index: 5;
 }
 .card-back-wrap{
+    display: relative;
     z-index: 4;
     background-image: url("/images/card-back.png");
     width: 447px;
     height: 245px;
     font-display: inline-block;
     transform: translate(-50%, 92%);
+}
+.cvc-output{
+    font-family: "Space Grotesk";
+    color: #edf0f6;
 }
