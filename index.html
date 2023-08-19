@@ -21,24 +21,24 @@
                     </div>
                     <div class="number-entry">
                         <p class="field-header">CARD NUMBER</p>
-                        <input type="text" class="number-input" placeholder="e.g. 1234 5678 9123 0000"/>
+                        <input type="text" class="number-input" placeholder="e.g. 1234 5678 9123 0000" maxlength="19"/>
                         <p class="error number-error"></p>
                     </div>
                     <div class="expiration-cvc-container">
                         <div class="expiration-entry">
                             <p class="field-header">EXP. DATE (MM/YY)</p>
-                            <input type="text" class="month-input" placeholder="MM"/>
-                            <input type="text" class="year-input" placeholder="YY"/>
+                            <input type="text" class="month-input" placeholder="MM" maxlength="2"/>
+                            <input type="text" class="year-input" placeholder="YY" maxlength="2"/>
                             <p class="error date-error"></p>
                         </div>
                         <div class="cvc-entry">
                             <p class="field-header">CVC</p>
-                            <input type="text" class="cvc-input" placeholder="e.g. 123"/>
+                            <input type="text" class="cvc-input" placeholder="e.g. 123" maxlength="3"/>
                             <p class="error cvc-error"></p>
                         </div>
-                        <div class="button-wrap">
-                            <button class="submit-button">Confirm</button>
-                        </div>
+                    </div>
+                    <div class="button-wrap">
+                        <button class="submit-button">Confirm</button>
                     </div>
                 </div>
             </div>

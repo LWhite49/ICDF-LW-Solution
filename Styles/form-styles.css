@@ -41,6 +41,10 @@ body{
     font-weight: 600;
 }
 
+.expiration-cvc-container{
+    display: flex;
+}
+
 .expiration-entry, .cvc-entry{
     display: inline-block;  
 }
@@ -91,17 +95,18 @@ body{
 }
 
 .error{
-    margin: 3px 0px 10px 0px;
+    margin: 3px 0px 0px 8px;
     padding: 0px;
-    font-size: 9pt;
-    color: #c08083;
+    font-family: "Veranda";
+    font-size: 10pt;
+    color: #e87e83;
     font-weight: 800;
     letter-spacing: .08cap;
     transform: translate(0%, 30%);
 }
 .submit-button{
     width:334px;
-    margin-top:12px;
+    margin-top:20px;
     padding: 10px 0px;
     background-color: #241432;
     color: white;
