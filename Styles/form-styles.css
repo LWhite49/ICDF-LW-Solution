@@ -115,11 +115,12 @@ body{
     width:334px;
     margin-top:20px;
     padding: 10px 0px;
-    background-color: #241432;
+    background-color: #220930;
     color: white;
     font-size: 11pt;
-    font-weight: 400;;
-    letter-spacing: .16cap;
+    font-weight: 600;;
+    letter-spacing: .04cap;
+    font-family: "Space Grotesk";
     border: none;
     border-radius: 6px;
 }
