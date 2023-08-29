@@ -54,7 +54,9 @@ body{
 .name-input, .number-input {
     width:320px;
     height: 34px;
+    font-family: "Space Grotesk";
     font-size: 12pt;
+    font-weight: 500;
     padding-left: 12px;
     border-radius: 6px;
     border: solid 2px rgb(170, 170, 170);
@@ -66,6 +68,7 @@ body{
     height: 34px;
     margin-right: 12px;
     padding-left: 12px;
+    font-family: "Space Grotesk";
     font-size: 12pt;
     border-radius: 6px;
     border: solid 2px rgb(170, 170, 170);
@@ -74,6 +77,7 @@ body{
 .cvc-input{
     width: 152px;
     height: 34px;
+    font-family: "Space Grotesk";
     font-size: 12pt;
     padding-left: 12px;
     border-radius: 6px;
@@ -158,11 +162,11 @@ body{
 }
 .name-output{
     font-family: "Space Grotesk";
-    font-size: 10pt;
+    font-size: 11pt;
     font-weight: 200;
     letter-spacing: .16cap;
     color: #edf0f6;
-    transform: translate(7.3%, 378%);
+    transform: translate(7.3%, 348%);
 }
 .cvc-output{
     font-family: "Space Grotesk";
@@ -177,5 +181,5 @@ body{
     font-weight: 200;
     letter-spacing: .24cap;
     color: #edf0f6;
-    transform: translate(78%, 197%);
+    transform: translate(78%, 194%);
 }
