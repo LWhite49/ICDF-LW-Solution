@@ -9,9 +9,6 @@ const numberOutputElem = document.querySelector('.number-output');
 const dateOutputElem = document.querySelector('.date-output');
 const cvcOutputElem = document.querySelector('.cvc-output');
 
-/* Create a list of input fields for checking input validation */
-const keysList = ['name', 'number', 'month', 'year', 'cvc'];
-
 /* Define functions that source the user input and apply it to the output for each field */
 const updateName = () => {
   nameOutputElem.innerHTML = nameInputElem.value;
@@ -56,18 +53,51 @@ const updateCVC = () => {
   }
 }
 
-
 /* Add keydown listener to each input field that runs updateOutputs function */
-document.querySelector('.name-input').addEventListener("keyup", () => {updateName(); });
+nameInputElem.addEventListener("keyup", () => {updateName(); });
 
-document.querySelector('.number-input').addEventListener("keyup", () => {
+numberInputElem.addEventListener("keyup", () => {
   updateNumber();
   if (event.key != "Backspace") {
   autoSpaceNumber(); }
   });
 
-document.querySelector('.month-input').addEventListener("keyup", () => {updateDate(); });
+monthInputElem.addEventListener("keyup", () => {updateDate(); });
 
-document.querySelector('.year-input').addEventListener("keyup", () => {updateDate(); });
+yearInputElem.addEventListener("keyup", () => {updateDate(); });
 
-document.querySelector('.cvc-input').addEventListener("keyup", () => {updateCVC(); });
+cvcInputElem.addEventListener("keyup", () => {updateCVC(); });
+
+/* Create input validation functions for each field that will check for "bad" conditions, adding the error class to the input field and mapping hte relevant message to the output field
+   If there is an error thrown, there will be an "error" returned, used to manage a boolean flag in the validateAll funciton */
+
+const nameValidation = () => {
+  /* If no bad conditions are present, clear error class and remove error message */
+  if (nameInputElem.value.includes(' ') && nameInputElem.value.length != 0 && nameInputElem.value[0] != ' ' && nameInputElem.value[nameInputElem.value.length - 1] != ' ') {
+    nameInputElem.classList.remove('error-highlight');
+    document.querySelector('.name-error').innerHTML = "";
+  }
+  /* Check for bad conditions one by one */
+  else if (nameInputElem.value[0] == ' ' || nameInputElem.value[nameInputElem.value.length - 1] == ' ') {
+    nameInputElem.classList.add('error-highlight');
+    document.querySelector('.name-error').innerHTML = "Cannot start or end with whitespace.";
+  }
+  else if (!nameInputElem.value.includes(' ') && nameInputElem.value.length != 0) {
+    nameInputElem.classList.add('error-highlight');
+    document.querySelector('.name-error').innerHTML = "Must include full name.";
+  }
+  else if (nameInputElem.value.length == 0) {
+    nameInputElem.classList.add('error-highlight');
+    document.querySelector('.name-error').innerHTML = "Field cannot be empty.";
+  }
+}
+
+/* Create a function that validates all fields, then checks to see if the next page can be loaded based on the application of error-highlight class */
+const validateAll = () => {
+  nameValidation();
+  }
+
+/* Add validateAll as an onclick listener to confirm button */
+document.querySelector('.submit-button').addEventListener("click", () => {
+  validateAll();
+});
