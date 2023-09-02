@@ -70,19 +70,20 @@ cvcInputElem.addEventListener("keyup", () => {updateCVC(); });
 
 /* Add keydown listeners for number fields that prevent manual spaces using preventDefault */
 numberInputElem.addEventListener("keydown", () => {
-  if (event.keyCode == 32) { event.preventDefault(); }
+  if ((event.keyCode == 32 || isNaN(event.key)) && event.keyCode != 8)  { event.preventDefault(); }
+  if ((numberInputElem.value.length == 4 || numberInputElem.value.length == 9 || numberInputElem.value.length == 14) && event.keyCode != 8) { event.preventDefault(); }
 });
 
 monthInputElem.addEventListener("keydown", () => {
-  if (event.keyCode == 32) { event.preventDefault(); }
+  if ((event.keyCode == 32 || isNaN(event.key)) && event.keyCode != 8) { event.preventDefault(); }
 });
 
 yearInputElem.addEventListener("keydown", () => {
-  if (event.keyCode == 32) { event.preventDefault(); }
+  if ((event.keyCode == 32 || isNaN(event.key)) && event.keyCode != 8) { event.preventDefault(); }
 });
 
 cvcInputElem.addEventListener("keydown", () => {
-  if (event.keyCode == 32) { event.preventDefault(); }
+  if ((event.keyCode == 32 || isNaN(event.key)) && event.keyCode != 8) { event.preventDefault(); }
 });
 
 
@@ -108,6 +109,10 @@ const nameValidation = () => {
     nameInputElem.classList.add('error-highlight');
     document.querySelector('.name-error').innerHTML = "Field cannot be empty.";
   }
+}
+
+const numberValidation = () => {
+  /* Use two Bool flags to see if */
 }
 
 /* Create a function that validates all fields, then checks to see if the next page can be loaded based on the application of error-highlight class */
