@@ -53,7 +53,7 @@ const updateCVC = () => {
   }
 }
 
-/* Add keydown listener to each input field that runs updateOutputs function */
+/* Add keyup listener to each input field that runs updateOutputs function */
 nameInputElem.addEventListener("keyup", () => {updateName(); });
 
 numberInputElem.addEventListener("keyup", () => {
@@ -67,6 +67,24 @@ monthInputElem.addEventListener("keyup", () => {updateDate(); });
 yearInputElem.addEventListener("keyup", () => {updateDate(); });
 
 cvcInputElem.addEventListener("keyup", () => {updateCVC(); });
+
+/* Add keydown listeners for number fields that prevent manual spaces using preventDefault */
+numberInputElem.addEventListener("keydown", () => {
+  if (event.keyCode == 32) { event.preventDefault(); }
+});
+
+monthInputElem.addEventListener("keydown", () => {
+  if (event.keyCode == 32) { event.preventDefault(); }
+});
+
+yearInputElem.addEventListener("keydown", () => {
+  if (event.keyCode == 32) { event.preventDefault(); }
+});
+
+cvcInputElem.addEventListener("keydown", () => {
+  if (event.keyCode == 32) { event.preventDefault(); }
+});
+
 
 /* Create input validation functions for each field that will check for "bad" conditions, adding the error class to the input field and mapping hte relevant message to the output field
    If there is an error thrown, there will be an "error" returned, used to manage a boolean flag in the validateAll funciton */
