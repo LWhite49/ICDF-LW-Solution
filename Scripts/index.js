@@ -173,7 +173,7 @@ const cvcValidation = () => {
   }
   else if (cvcInputElem.value.length < 3) {
     cvcInputElem.classList.add("error-highlight");
-    document.querySelector(".cvc-error").innerHTML = 'CVC must include all 3 digits.';
+    document.querySelector(".cvc-error").innerHTML = 'Include all 3 digits.';
   }
 }
 
@@ -195,8 +195,12 @@ document.querySelector('.submit-button').addEventListener("click", () => {
   }
   else {
     document.querySelector('.form-wrap').innerHTML = `
+    <img class="submit-image" src="../images/icon-complete.svg"/>
+    <p class="submit-header">THANK YOU!</p>
+    <p class="submit-text">We've added your card details</p>
     <div class="button-wrap">
       <button class="submit-button">Confirm</button>
     </div>`;
+    document.querySelector('.submit-button').innerHTML = "Continue";
   }
 });

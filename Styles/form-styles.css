@@ -30,10 +30,12 @@ body{
 .form-wrap{
     display: flex;
     flex-direction: column;
+    align-items: center;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-33.3%, -50%);
+    row-gap: 10px;
 }
 
 .field-header{
@@ -118,17 +120,22 @@ body{
 .submit-button{
     width:334px;
     margin-top:20px;
-    padding: 10px 0px;
+    padding: 13px 0px;
     background-color: #220930;
     color: white;
-    font-size: 11pt;
+    font-size: 13pt;
     font-weight: 600;;
-    letter-spacing: .04cap;
+    letter-spacing: .12cap;
     font-family: "Space Grotesk";
     border: none;
-    border-radius: 6px;
+    border-radius: 10px;
 }
 
+.card-wrap{
+    position: absolute;
+    display: inline-block;
+    top: 31%;
+}
 .card-front-wrap{
     display: relative;
     z-index: 3;
@@ -136,7 +143,7 @@ body{
     width: 447px;
     height: 245px;
     display:inline-block;
-    transform: translate(-72%, 80%);
+    transform: translate(-72%);
 }
 .card-front-logo{
     display: inline;
@@ -150,7 +157,7 @@ body{
     width: 447px;
     height: 245px;
     font-display: inline-block;
-    transform: translate(-50%, 84%);
+    transform: translate(-50%);
 }
 .number-output{
     font-family: "Space Grotesk";
@@ -182,4 +189,49 @@ body{
     letter-spacing: .24cap;
     color: #edf0f6;
     transform: translate(78%, 194%);
+}
+
+.submit-image{
+    width: 80px;
+}
+
+.submit-header{
+    font-family: "Space Grotesk";
+    font-size: 19pt;
+    font-weight: 500;
+    letter-spacing: .13cap;
+    color: #3b2246;
+    margin-bottom: 0px;
+    margin-top: 12px;
+}
+
+.submit-text{
+    font-size: 13pt;
+    font-weight: 500;
+    color: #6b696c;
+    margin-top: 6px;
+}
+
+@media (max-height: 1110px) {
+    .card-wrap{
+        top: 26%;
+    }
+}
+
+@media (max-height: 810px) {
+    .card-wrap{
+        top: 22%;
+    }
+}
+
+@media (max-height: 700px) {
+    .card-wrap{
+        top: 10%;
+    }
+}
+
+@media (max-height: 620px) {
+    .card-wrap{
+        top: 4%;
+    }
 }
