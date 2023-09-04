@@ -146,12 +146,12 @@ const dateValidation = () => {
   /* If length of month is too short */
   if (monthInputElem.value.length < 2) {
     monthInputElem.classList.add("error-highlight");
-    document.querySelector(".date-error").innerHTML = 'Month must be in form MM.';
+    document.querySelector(".date-error").innerHTML = 'Must be in form MM.';
   }
   /* If month is in wrong range */
   else if ( parseInt(monthInputElem.value, 10) < 1 || parseInt(monthInputElem.value, 10) > 12 ) {
     monthInputElem.classList.add("error-highlight");
-    document.querySelector(".date-error").innerHTML = 'Month must be between 01-12.';
+    document.querySelector(".date-error").innerHTML = 'Invalid Month.';
   }
 
   /* If length of year is too short */
