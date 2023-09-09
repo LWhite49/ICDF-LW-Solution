@@ -51,10 +51,14 @@ When any of these errors are flagged, each field has an error output field that 
 
 - There are a few big tools I learned to use in this project. 
 
-    - The usage of any image as a background for a div is much easier than I thought it was. First, you must set the width and height set to the exact pixel size of the image you want to use. Then, you must use the background-image style with the value url("parent/file/path").
+    - The usage of any image as a background for a div is much easier than I thought it was. First, you must set the width and height set to the exact pixel size of the image you want to use. Then, you must use the background-image style with the value url("parent/file/path")
+
+    - Combining this with background-size allows for full customization of wrapping and stretching, which is incredibly useful.
 
     - The usage of the event.preventDefault() function is really useful for preventing any sort of action inside a field, in effect. 
 
     - Use of the ::placeholder css state allows you to adjust the placeholder text in an input field
 
-    - 
+    - Boolean logic can be used in @media queries for deciding what happens when the screen is manipulated in any way by separating queries like (this) and (this).
+    
+ 

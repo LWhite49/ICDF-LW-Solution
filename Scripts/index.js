@@ -157,7 +157,7 @@ const dateValidation = () => {
   /* If length of year is too short */
   if (yearInputElem.value.length < 2) {
     yearInputElem.classList.add("error-highlight");
-    document.querySelector(".date-error").innerHTML = 'Year must be in form YY.';
+    document.querySelector(".date-error").innerHTML = 'Must be in form YY.';
   }
   /* If year is expired already */
   else if (parseInt(yearInputElem.value, 10) < parseInt(currentYear % 100, 10)) {

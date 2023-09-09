@@ -7,18 +7,18 @@ body{
 }
 .background-wrap{
     display: flex;
+    flex-direction: row;
 }
 .left-background{
     display:inline-block;
     padding: 0px;
     margin: 0px;
     width: 33vw;
-    height: 100vh
-}
-.background-image{
-    width: 33vw;
     height: 100vh;
+    background-image: url('../images/bg-main-desktop.png');
+    background-size: 33vw 100vh;
 }
+
 .right-background{
     display: inline-block;
     position: relative;
@@ -139,12 +139,12 @@ body{
 }
 .card-front-wrap{
     display: relative;
-    z-index: 3;
     background-image: url("/images/card-front.png");
     width: 447px;
     height: 245px;
     display:inline-block;
     transform: translate(-72%);
+    z-index: 3;
 }
 .card-front-logo{
     display: inline;
@@ -153,12 +153,12 @@ body{
 }
 .card-back-wrap{
     display: relative;
-    z-index: 4;
     background-image: url("/images/card-back.png");
     width: 447px;
     height: 245px;
     font-display: inline-block;
     transform: translate(-50%);
+    z-index: 1;
 }
 .number-output{
     font-family: "Space Grotesk";
@@ -175,6 +175,7 @@ body{
     letter-spacing: .16cap;
     color: #edf0f6;
     transform: translate(7.3%, 348%);
+    text-transform: uppercase;
 }
 .cvc-output{
     font-family: "Space Grotesk";
@@ -213,25 +214,25 @@ body{
     margin-top: 6px;
 }
 
-@media (max-height: 1110px) {
+@media (max-height: 1110px) and (min-width: 770px) {
     .card-wrap{
         top: 26%;
     }
 }
 
-@media (max-height: 810px) {
+@media (max-height: 810px) and (min-width: 770px) {
     .card-wrap{
         top: 22%;
     }
 }
 
-@media (max-height: 700px) {
+@media (max-height: 700px) and (min-width: 770px) {
     .card-wrap{
         top: 10%;
     }
 }
 
-@media (max-height: 620px) {
+@media (max-height: 620px) and (min-width: 770px) {
     .card-wrap{
         top: 4%;
     }
@@ -258,5 +259,77 @@ body{
     }
     .card-front-wrap{
         transform: translate(-58%);
+    }
+}
+
+/* Mobile Design */
+@media (max-width: 770px) {
+    .background-wrap{
+        flex-direction: column;
+    }
+    .left-background{
+        width: 100vw;
+        height: 33vh;
+        background-image: url('../images/bg-main-mobile.png');
+        background-size: 100vw 33vh;
+    }
+    .right-background{
+        width: 100vw;
+        height:67vh;
+        transform: translate(40%,0%);
+    }
+    .card-front-wrap{
+        background-size: 310px 182px;
+        height: 182px;
+        width: 310px;
+        transform: translate(-44%, -160%);
+        position:relative;
+        z-index: 3;
+    }
+    .card-front-logo{
+        width: 20%;
+        transform: translate(30%, 50%);
+    }
+    .number-output{
+        transform: translate(6.2%, 150%);
+        font-size: 16pt;
+        font-weight: 500;
+        letter-spacing: .12cap;
+    }
+    .name-output{
+        font-size: 9pt;
+        font-weight: 100;
+        letter-spacing: .16cap;
+        color: #edf0f6;
+        transform: translate(6.4%, 200%);
+    }
+    .date-output{
+        transform: translate(82%, 52%);
+        font-size: 8pt;
+    }
+    .card-back-wrap{
+        background-size: 310px 182px;
+        height: 182px;
+        width: 310px;
+        position: relative;
+        z-index: 1;
+        transform: translate(-30%, -323%);
+    }
+    .cvc-output{
+        font-size: 10pt;
+    }
+    .form-wrap{
+        left: 0%;
+    }
+    .error{
+        font-size: 8pt;
+        font-weight: 600;
+        margin-bottom: -8px;
+    }
+}
+
+@media (max-height: 665px) and (max-width: 770px){
+    .card-wrap{
+        top:36%;
     }
 }
