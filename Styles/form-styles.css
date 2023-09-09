@@ -36,6 +36,7 @@ body{
     left: 50%;
     transform: translate(-33.3%, -50%);
     row-gap: 10px;
+    z-index: 10;
 }
 
 .field-header{
@@ -233,5 +234,29 @@ body{
 @media (max-height: 620px) {
     .card-wrap{
         top: 4%;
+    }
+}
+
+@media (max-width: 1050px) {
+    .form-wrap{
+        left: 62%;
+    }
+    .name-input, .number-input{
+        width: 260px;
+    }
+    .month-input, .year-input{
+        width:36px;
+        margin-right: 6px;
+        padding-left: 12px;
+    }
+    .cvc-input{
+        width: 131px;
+        margin-left: 4px;
+    }
+    .submit-button{
+        width: 260px;
+    }
+    .card-front-wrap{
+        transform: translate(-58%);
     }
 }

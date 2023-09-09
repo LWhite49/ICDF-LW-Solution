@@ -162,7 +162,7 @@ const dateValidation = () => {
   /* If year is expired already */
   else if (parseInt(yearInputElem.value, 10) < parseInt(currentYear % 100, 10)) {
     yearInputElem.classList.add("error-highlight");
-    document.querySelector(".date-error").innerHTML = 'Card expired last year.';
+    document.querySelector(".date-error").innerHTML = 'Card expired.';
   }
 }
 
