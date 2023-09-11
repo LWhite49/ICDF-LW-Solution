@@ -139,7 +139,7 @@ body{
 }
 .card-front-wrap{
     display: relative;
-    background-image: url("/images/card-front.png");
+    background-image: url("../images/card-front.png");
     width: 447px;
     height: 245px;
     display:inline-block;
@@ -153,7 +153,7 @@ body{
 }
 .card-back-wrap{
     display: relative;
-    background-image: url("/images/card-back.png");
+    background-image: url("../images/card-back.png");
     width: 447px;
     height: 245px;
     font-display: inline-block;
